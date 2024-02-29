@@ -1,0 +1,15 @@
+services:
+  djangorest_app:
+    image: django_api:1.0.0
+    build: ./DJANGO_REST
+    ports:
+      - "8000:8000"
+
+  react_app:
+    build: ./REACT
+    ports:
+      - "3001:3000"
+    # links:
+    #   - djangorest_app
+
+  
